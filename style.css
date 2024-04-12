@@ -50,10 +50,8 @@ h1 {
 }
 
 .row {
-    width: calc(33.33% - 20px); /* Calculate width with equal spacing between rows */
-    margin: 10px; /* Adjust margin for spacing */
+    width: 100%; /* Each row takes the full width */
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between; /* Distribute boxes evenly */
 }
 
@@ -91,8 +89,8 @@ p {
         font-size: 4vw;
     }
     #box {
-        width: calc(50% - 20px);
-        padding-top: calc(50% - 20px);
+        width: calc(33.33% - 20px);
+        padding-top: calc(33.33% - 20px);
         font-size: 5vw;
         margin: 10px;
     }
