@@ -1,38 +1,38 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    box-sizing: border-box;
 }
 
-.wrapper{
+.wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.main{
+.main {
     height: 100vh;
     width: 100vw;
     background-color: black;
     overflow: hidden;
 }
 
-h1{
+h1 {
     text-align: center;
     padding: 20px;
     color: white;
-    font-size: 24px; /* Keep font size consistent */
+    font-size: 2.5vw; /* Responsive font size */
 }
 
-#box{
-    height: 31.33333%;
-    width: 31.333333%;
+#box {
+    width: calc(33.33% - 20px); /* Calculate width with equal spacing between boxes */
+    padding-top: calc(33.33% - 20px); /* Maintain aspect ratio */
     background-color: red;
     border: 2px solid white;
     border-radius: 10px;
-    margin: 2px;
-    font-size: 50px; 
+    margin: 10px; /* Adjust margin for spacing */
+    font-size: 3vw; /* Responsive font size */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,63 +40,84 @@ h1{
     color: black;
 }
 
-.container{
-    height: 60vh;
-    width: 40vw;
+.container {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between; /* Distribute boxes evenly */
     z-index: 2;
+    margin-top: 20px;
 }
 
-#button{
+#button {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     background-color: black;
 }
 
-.bt{
-    font-size: x-large;
-    border: 5px solid white;
+.bt {
+    font-size: 1.5vw; /* Responsive font size */
+    border: 0.3vw solid white; /* Responsive border size */
     cursor: pointer;
-    padding: 5px;
+    padding: 0.5vw 1vw; /* Responsive padding */
     background-color: pink;
     color: black;
-    margin-top: 30px;
-    padding: 10px;
+    margin-top: 2vw; /* Responsive margin */
     border-radius: 5px;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
-p{
+p {
     color: white;
-    font-size: 35px;
+    font-size: 2vw; /* Responsive font size */
 }
 
-.hide{
+.hide {
     display: none;
 }
 
-@media only screen and (max-width: 600px) {
+/* Media Query for tablets and smaller devices */
+@media only screen and (max-width: 768px) {
     h1 {
-        font-size: 20px;
+        font-size: 4vw;
     }
     #box {
-        height: 10%;
-        width: 10%; /* Adjust width for smaller screens */
-        font-size: 36px; /* Adjust font size for smaller screens */
-    }
-    .container {
-        width: 60vw; /* Adjust width for smaller screens */
+        width: calc(50% - 20px);
+        padding-top: calc(50% - 20px);
+        font-size: 5vw;
+        margin: 10px;
     }
     .bt {
-        font-size: large; /* Adjust font size for smaller screens */
-        margin-top: 10px; /* Adjust margin for smaller screens */
+        font-size: 3vw;
+        padding: 1vw 2vw;
+        margin-top: 4vw;
     }
     p {
-        font-size: 24px; /* Adjust font size for smaller screens */
+        font-size: 3vw;
     }
 }
 
-
+/* Media Query for smartphones */
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 6vw;
+    }
+    #box {
+        width: calc(100% - 20px);
+        padding-top: calc(100% - 20px);
+        font-size: 7vw;
+        margin: 10px;
+    }
+    .container {
+        justify-content: center;
+    }
+    .bt {
+        font-size: 4vw;
+        padding: 2vw 3vw;
+        margin-top: 6vw;
+    }
+    p {
+        font-size: 4vw;
+    }
+}
