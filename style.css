@@ -1,124 +1,113 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures viewport fills on desktops */
 }
 
 .main {
-    height: 100vh;
-    width: 100vw;
-    background-color: black;
-    overflow: hidden;
+  width: 100vw;
+  background-color: black;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Added for vertical centering */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
 }
 
 h1 {
-    text-align: center;
-    padding: 20px;
-    color: white;
-    font-size: 2.5vw; /* Responsive font size */
+  text-align: center;
+  padding: 2vw;
+  color: white;
+  font-size: 2.5vw;
 }
 
 #box {
-    width: 25%;
-    padding-top: 25%; /* Maintain aspect ratio */
-    background-color: red;
-    border: 2px solid white;
-    border-radius: 10px;
-    margin: 1%;
-    font-size: 3vw; /* Responsive font size */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    color: black;
+  width: 25%;
+  padding: 25%; /* Maintain aspect ratio */
+  background-color: red;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin: 1%;
+  font-size: 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: black;
 }
 
 .container {
-    width: 80%;
-    max-width: 800px; /* Limit container width for larger screens */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    z-index: 2;
-    margin-top: 20px;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 2;
+  margin: 2vw auto; /* Responsive margin with auto centering */
 }
 
 #button {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: black;
+  width: 100%; /* Button container takes full container width */
 }
 
 .bt {
-    font-size: 1.5vw; /* Responsive font size */
-    border: 0.3vw solid white; /* Responsive border size */
-    cursor: pointer;
-    padding: 0.5vw 1vw; /* Responsive padding */
-    background-color: pink;
-    color: black;
-    margin-top: 2vw; /* Responsive margin */
-    border-radius: 5px;
-    font-weight: bold;
+  font-size: 1.5vw;
+  border: 0.3vw solid white;
+  cursor: pointer;
+  padding: 1vw 2vw;
+  background-color: pink;
+  color: black;
+  margin: 1vw; /* Responsive margin */
+  border-radius: 5px;
+  font-weight: bold;
+  flex: 1; /* Buttons take equal width within container */
 }
 
 p {
-    color: white;
-    font-size: 2vw; /* Responsive font size */
+  color: white;
+  font-size: 2vw;
 }
 
-.hide {
-    display: none;
-}
+/* Media Queries (Optional Adjustments) */
 
-/* Media Query for tablets and smaller devices */
 @media only screen and (max-width: 768px) {
-    h1 {
-        font-size: 4vw;
-    }
-    #box {
-        width: 45%;
-        padding-top: 45%;
-        font-size: 5vw;
-        margin: 2%;
-    }
-    .bt {
-        font-size: 3vw;
-        padding: 1vw 2vw;
-        margin-top: 4vw;
-    }
-    p {
-        font-size: 3vw;
-    }
+  #box {
+    font-size: 4vw;
+  }
+  .bt {
+    font-size: 2vw;
+    padding: 2vw 3vw;
+    margin: 2vw;
+  }
+  p {
+    font-size: 3vw;
+  }
 }
 
-/* Media Query for smartphones */
 @media only screen and (max-width: 480px) {
-    h1 {
-        font-size: 6vw;
-    }
-    #box {
-        width: 90%;
-        padding-top: 90%;
-        font-size: 7vw;
-        margin: 3%;
-    }
-    .container {
-        width: 90%;
-    }
-    .bt {
-        font-size: 4vw;
-        padding: 2vw 3vw;
-        margin-top: 6vw;
-    }
-    p {
-        font-size: 4vw;
-    }
+  h1 {
+    font-size: 5vw;
+  }
+  #box {
+    font-size: 6vw;
+  }
+  .bt {
+    font-size: 3vw;
+    padding: 3vw 4vw;
+    margin: 3vw;
+  }
+  p {
+    font-size: 4vw;
+  }
 }
